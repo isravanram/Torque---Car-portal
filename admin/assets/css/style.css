@@ -1,0 +1,703 @@
+/* color: #007bff; */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    
+    background-color: #fff;
+    color:#555;
+    font-family: 'Roboto', 'Arial', sans-serif;;
+    font-size: 18px;
+    text-rendering: optimizeLegibility; /*Check this one */
+}
+
+body {
+    min-width: 720px;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 100%;
+}
+
+h2{
+    font-size: 160%;
+    word-spacing: 2px;
+    font-weight: 350;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #007bff;
+    content: "";
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+h3 {
+
+    margin-bottom: 40px;
+}
+.navbar-brand {
+    display: inline-block;
+    margin-right: 1rem;
+    line-height: inherit;
+    padding: 11px 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #007bff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.adminHeader {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f4f4f4;
+}
+
+#mainContent {
+    margin-top: 20px;
+    padding: 0 20px;
+    margin-left: 10px;
+    
+}
+
+#navBarContainer {
+	background-color: #000;
+    width: 210px;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    border-radius: 3px;
+}
+
+.navBar {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.navBar .group {
+    padding: 10px 0;
+}
+
+.navItem {
+    padding: 10px 0;
+    font-size: 100%;
+    font-weight: 200;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+    color: #a0a0a0;
+}
+
+.icon {
+    font-size: 140%;
+}
+
+.navItem:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.navItemLink {
+    text-decoration: none;
+
+}
+
+.navItemLink:hover {
+    margin-left: 15px;
+    transition: margin-left 0.4s;
+}
+
+.navItem span {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+#mainViewContainer {
+    margin-top: 10px;
+    margin-left: 185px;
+    width: calc(100% - 185px);
+}
+
+.logoutButton {
+    display: inline-block;
+    float: right;
+    border-radius: 5px;
+    margin-top: 12px;
+    border: 0;
+    background-color: rgba(148, 165, 156, 0.99);
+    padding: 10px 15px;
+    letter-spacing: 1px; 
+}
+
+.nav-name {
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    padding: 14px;
+    font-family: 27px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.label {
+    float: right;
+    margin-top: 7px;
+    margin-right: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="textarea"],
+input[type="password"],
+input[type="number"],
+select,
+textarea
+ {
+    text-align: left;
+    width: 500px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border : 1px solid #ccc;
+    font-size: 80%;
+}
+
+.btn:link,
+.btn:visited,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button
+{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 200px;
+    letter-spacing: 1px;
+    color:#fff;
+    outline: none;
+    -webkit-transition: border 0.2s, background-color 0.2s,color 0.2s;
+    transition: border 0.2s, background-color 0.2s,color 0.2s;
+    cursor: pointer;
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"],
+input[type="button"],
+button{
+    background-color: #007bff;
+    border:1px solid #007bff;
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited,
+ input[type="reset"],
+ input[type="button"]{
+    background-color: rgba(148, 165, 156, 0.99);
+    border: 0;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.message {
+    color: #fff;
+    padding: 10px 10px;
+    width: 30%;
+    letter-spacing: 0.7px;
+    background-color: #3a3838;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 25px;
+}
+
+.gridViewItem {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 280px;
+    min-width: 200px;
+    margin-bottom: 20px;
+    /*box-shadow: 2px 4px 4px #ddd;*/
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.gridViewInfo {
+    font-weight: 300;
+    text-align: left;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+.gridViewItem a {
+    text-decoration: none;
+}
+
+.gridViewItem img {
+    width: 100%;
+    height: 250px;
+    border-radius: 4px;
+}
+
+.gridViewInfo.price {
+    font-weight: 600;
+}
+
+.gridViewItem:active {
+    outline: none;
+}
+
+.productDetailsImage {
+    width: 450px;
+    height: auto; 
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+.productTitle {
+    float: right;
+    position: absolute;
+    top: 140px;
+    left: 720px;
+    font-weight: 600;
+    word-spacing: 2px;
+}
+
+.sellerNameSmall {
+    font-weight: 600;
+    font-size: 80%;
+}
+
+.descriptionTitle {
+    font-weight: 500;
+    font-size: 105%;
+    border-bottom: 1px solid black;
+}
+
+
+.description {
+    font-weight: 400;
+    display: block;
+    line-height: 155%;
+    font-size: 90%;
+    margin-top: 10px;
+}
+
+.sellerAndUserGridViewItem {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 280px;
+    min-width: 200px;
+    margin-bottom: 20px;
+    /*box-shadow: 2px 4px 4px #ddd;*/
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sellerAndUserGridViewItem:active {
+    outline: none;
+}
+
+.sellerAndUserGridViewInfo {
+    font-weight: 700;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+.sellerAndUserGridViewItem img {
+    width: 80%;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+
+.sellerDetailsContainer img {
+    border-radius: 50%;
+    width: 60%;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.tracklist {
+    padding: 15px;
+}
+
+.tracklistRow {
+    height: 90px;
+    padding: 15px 10px;
+    list-style: none;
+    background-color: #f4f4f4;
+    margin-bottom: 15px;
+}
+
+.tracklistRow:hover {
+    cursor: pointer;
+}
+
+.tracklistRow span {
+    color: black;
+    font-weight: 200;
+}
+
+.tracklistRow:hover {
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.1), 0 1px 3px 0 rgba(0,0,0,.08);
+}
+
+.tracklistRow .trackCount {
+    width: 8%;
+    float: left;
+}
+
+.tracklistRow .trackCount span {
+    visibility: visible;
+}
+
+.tracklistRow .trackInfo {
+    width: 75%;
+    float: left;
+}
+
+.tracklistRow .smallTrackInfo {
+    width: 15%;
+    float: left;
+}
+
+
+.tracklistRow .trackInfo span {
+    display: block;
+}
+
+.tracklistRow .trackDuration {
+    width: 12%;
+    float: left;
+    text-align: left;
+}
+
+.tracklistRow .longTrackDuration {
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+
+.tracklistRow .trackInfo .trackName {
+    margin-bottom: 7px;
+}
+
+.longHeightRow {
+    height: 110px;
+    padding: 15px 10px;
+    list-style: none;
+    background-color: #f4f4f4;
+    margin-bottom: 15px;   
+}
+
+.smallProductImage {
+    height: 45px;
+    width: auto;
+}
+
+.header{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("Craft_Hero.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.hero-text-box{
+    position: absolute;
+    width:1140px;
+    top:50%;
+    left: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-40%);
+    font-weight: 100;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 35px;
+    font-weight: 50;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color:white;
+    padding: 8px 3px;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 3px solid #007bff;
+}
+
+.grey li a{
+    color: black;
+}
+
+.grey li a:link,
+.grey li a:visited{
+    color: black;
+}
+
+.backgroundBlueRegsiter {
+    background-color: #007bff;
+    display: block;
+    height: 200px;
+    content: "";
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.sellerForms {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    width: 740px;
+    top: 120px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px lightgrey;
+    padding: 20px 10px; 
+}
+
+.sellerForms p  { margin-top: 20px; }
+.sellerForms input[type="text"],
+.sellerForms input[type="password"],
+.sellerForms input[type="textarea"],
+.sellerForms input[type="email"],
+.sellerForms select ,
+.sellerForms textarea ,
+.sellerForms input[type="number"] { 
+    width: 40%;
+}
+
+.hasAccountText span {
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#registerForm,
+#loginForm {
+    display: none;
+}
+
+.errorMessage {
+    color: red;
+    display: block;
+    font-size: 60%;
+}
+
+.productCategoryList li:first-child{
+    margin-left: 20px;
+}
+
+.productCategoryList li{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: lightgrey;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.productCategoryList li:hover{cursor: pointer;}
+
+.productForm,
+.profileDisplay {
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    width: 1140px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px lightgrey;
+    padding: 20px 10px; 
+}
+
+.productForm img {
+    display: block;
+    margin: 0 auto;
+    height: 170px;
+}
+
+.productForm p  { margin-top: 20px; }
+.productForm input[type="text"],
+.productForm input[type="password"],
+.productForm input[type="textarea"],
+.productForm input[type="email"],
+.productForm select ,
+.productForm textarea ,
+.productForm input[type="number"] { 
+    width: 60%;
+}
+
+
+
+
+/*.searchContainer {
+    background-color: #242424;
+    padding: 20px 28px;
+}
+
+.searchContainer h4{
+    margin: 0;
+    font-weight: 300;
+}*/
+
+.searchContainer .searchInput{
+    width: 40%;
+    background-color: lightgrey;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    outline: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.searchResultRow {
+    padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+    background-color: #282828;
+}
+
+.artistContainer h2 {
+    text-align: center;
+}
+
+.noResults {
+    margin: 15px;
+    display: block;
+}
+
+
+.buttonItems .button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.playlistsContainer {
+    padding: 10px 0;
+}
+
+.gridViewItem .playlistImage img {
+    border: 4px solid #282828;
+    padding: 10px;
+}
+
+.light {
+    background-color: #f4f4f4;
+}
+
+
+.profileDisplay {
+    display: block;
+    padding: 25px 20px;
+    width: 80%;
+} 
+
+.profileDisplay p {
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.update p{
+    margin-bottom: 15px;
+}
+
+.accountLinks {
+    margin-top: 80px;
+}
+
+.accountLinks a {
+    background-color: lightgrey;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.accountLinks a:visited,
+.accountLinks a:link {
+    background-color: lightgrey;
+    margin-right: 130px;
+    padding: 10px 40px;
+    text-decoration: none;
+    color:#555;
+    border-radius: 6px;
+    letter-spacing: 1px;
+}
